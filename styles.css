@@ -1,0 +1,204 @@
+/* ===========================================================
+   Parcours de français — feuille de style partagée
+   Conçue pour la lecture à l'écran ET l'impression / PDF
+   =========================================================== */
+
+:root {
+  --bleu:      #1e5aa8;
+  --bleu-clair:#e8f0fb;
+  --vert:      #2e7d4f;
+  --vert-clair:#e6f4ec;
+  --orange:    #d9822b;
+  --orange-clair:#fdf1e3;
+  --rouge:     #c0392b;
+  --rouge-clair:#fdecea;
+  --violet:    #7d4fa8;
+  --violet-clair:#f1eaf8;
+  --gris:      #566072;
+  --gris-clair:#f4f6f9;
+  --bordure:   #d8dee9;
+  --texte:     #24292f;
+}
+
+* { box-sizing: border-box; }
+
+html { font-size: 16px; }
+
+body {
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  color: var(--texte);
+  line-height: 1.65;
+  margin: 0;
+  background: #fbfcfe;
+}
+
+.page {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 48px 40px 80px;
+  background: #ffffff;
+}
+
+/* ---------- En-tête ---------- */
+.hero {
+  border-radius: 16px;
+  padding: 32px 34px;
+  color: #fff;
+  margin-bottom: 32px;
+  background: linear-gradient(135deg, var(--bleu), #2e7d4f);
+}
+.hero.n1 { background: linear-gradient(135deg, #2e7d4f, #57b894); }
+.hero.n2 { background: linear-gradient(135deg, #1e5aa8, #57a0e0); }
+.hero.n3 { background: linear-gradient(135deg, #7d4fa8, #b07dd0); }
+.hero.n4 { background: linear-gradient(135deg, #d9822b, #e8b06a); }
+.hero.n5 { background: linear-gradient(135deg, #c0392b, #e07a6a); }
+.hero h1 { margin: 0 0 8px; font-size: 2rem; line-height: 1.2; }
+.hero p  { margin: 0; opacity: .95; font-size: 1.02rem; }
+.hero .tag {
+  display: inline-block; background: rgba(255,255,255,.22);
+  padding: 4px 12px; border-radius: 999px; font-size: .85rem;
+  margin-bottom: 14px; font-weight: 600; letter-spacing: .3px;
+}
+
+/* ---------- Titres ---------- */
+h2 {
+  color: var(--bleu);
+  border-bottom: 3px solid var(--bleu-clair);
+  padding-bottom: 6px;
+  margin-top: 42px;
+  font-size: 1.5rem;
+}
+h3 { color: var(--vert); margin-top: 30px; font-size: 1.18rem; }
+h4 { color: var(--gris); margin-top: 22px; font-size: 1.03rem; }
+
+a { color: var(--bleu); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ---------- Tableaux ---------- */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 18px 0;
+  font-size: .96rem;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 0 0 1px var(--bordure);
+}
+th, td { padding: 9px 13px; text-align: left; border-bottom: 1px solid var(--bordure); vertical-align: top; }
+th { background: var(--bleu-clair); color: var(--bleu); font-weight: 700; }
+tr:last-child td { border-bottom: none; }
+tr:nth-child(even) td { background: var(--gris-clair); }
+
+/* ---------- Encadrés ---------- */
+.callout {
+  border-radius: 10px;
+  padding: 14px 18px;
+  margin: 20px 0;
+  border-left: 5px solid var(--bleu);
+  background: var(--bleu-clair);
+}
+.callout.astuce { border-color: var(--vert); background: var(--vert-clair); }
+.callout.attention { border-color: var(--rouge); background: var(--rouge-clair); }
+.callout.note { border-color: var(--orange); background: var(--orange-clair); }
+.callout .titre { font-weight: 700; display: block; margin-bottom: 4px; }
+
+/* ---------- Textes à lire ---------- */
+.lecture {
+  background: #fffdf7;
+  border: 1px solid #efe4c8;
+  border-left: 5px solid var(--orange);
+  border-radius: 10px;
+  padding: 18px 24px;
+  margin: 18px 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+.lecture p { margin: .5em 0; }
+
+/* ---------- Corrigés (repliables) ---------- */
+details.corrige {
+  border: 1px solid var(--vert);
+  border-radius: 8px;
+  padding: 6px 14px;
+  margin: 14px 0;
+  background: var(--vert-clair);
+}
+details.corrige summary {
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--vert);
+  padding: 6px 0;
+}
+details.corrige[open] summary { margin-bottom: 8px; }
+
+/* ---------- Exercices ---------- */
+.exercice {
+  background: var(--gris-clair);
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin: 16px 0;
+  border: 1px solid var(--bordure);
+}
+.exercice .num {
+  display: inline-block; background: var(--violet); color: #fff;
+  border-radius: 6px; padding: 2px 10px; font-weight: 700;
+  font-size: .85rem; margin-bottom: 8px;
+}
+
+/* ---------- Checklist ---------- */
+ul.check { list-style: none; padding-left: 0; }
+ul.check li { padding: 4px 0 4px 30px; position: relative; }
+ul.check li::before {
+  content: "☐"; position: absolute; left: 4px; color: var(--bleu); font-size: 1.1rem;
+}
+
+/* ---------- Navigation bas de page ---------- */
+.nav {
+  display: flex; justify-content: space-between; gap: 12px;
+  margin-top: 48px; padding-top: 20px; border-top: 2px solid var(--bordure);
+  flex-wrap: wrap;
+}
+.nav a {
+  padding: 10px 18px; border-radius: 8px; background: var(--bleu-clair);
+  font-weight: 600;
+}
+
+/* ---------- Cartes d'index ---------- */
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px,1fr)); gap: 16px; margin: 24px 0; }
+.card {
+  border: 1px solid var(--bordure); border-radius: 12px; padding: 20px;
+  text-decoration: none; color: var(--texte); display: block;
+  transition: transform .1s, box-shadow .1s;
+  border-top: 5px solid var(--bleu);
+}
+.card:hover { transform: translateY(-3px); box-shadow: 0 6px 18px rgba(0,0,0,.08); text-decoration: none; }
+.card.n1 { border-top-color: var(--vert); }
+.card.n2 { border-top-color: var(--bleu); }
+.card.n3 { border-top-color: var(--violet); }
+.card.n4 { border-top-color: var(--orange); }
+.card.n5 { border-top-color: var(--rouge); }
+.card .lvl { font-size: .8rem; font-weight: 700; color: var(--gris); text-transform: uppercase; letter-spacing: .5px; }
+.card h3 { margin: 6px 0; }
+.card p { margin: 0; font-size: .92rem; color: var(--gris); }
+
+kbd {
+  background: #eef1f6; border: 1px solid var(--bordure); border-radius: 5px;
+  padding: 1px 7px; font-family: "SFMono-Regular", Consolas, monospace; font-size: .9rem;
+}
+.pill { display:inline-block; background: var(--vert-clair); color: var(--vert); border-radius: 999px; padding: 1px 10px; font-size:.85rem; font-weight:600; }
+
+hr { border: none; border-top: 1px solid var(--bordure); margin: 32px 0; }
+
+/* ============ IMPRESSION / PDF ============ */
+@media print {
+  body { background: #fff; }
+  .page { max-width: none; padding: 0 6mm; }
+  .nav { display: none; }
+  details.corrige { border-color: #2e7d4f; }
+  details.corrige[open] { break-inside: avoid; }
+  .lecture, .exercice, .callout, table { break-inside: avoid; }
+  h2, h3 { break-after: avoid; }
+  .hero { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  a { color: var(--texte); text-decoration: none; }
+}

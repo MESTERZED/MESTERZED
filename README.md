@@ -1,42 +1,50 @@
-# 📚 Apprendre le français — Parcours progressif complet
+# 📚 Apprendre le français — Parcours progressif (du CP au Bac)
 
-Bienvenue dans ce parcours d'apprentissage du français conçu **à la manière des
-programmes scolaires français**, du primaire jusqu'au baccalauréat.
+Un programme complet et progressif pour apprendre le français, construit à la
+manière de l'école française : vocabulaire, grammaire, conjugaison, textes à lire
+et exercices corrigés, du primaire jusqu'au baccalauréat.
 
-Chaque niveau suit la même logique pédagogique :
-
-1. **Objectifs du niveau** — ce que l'élève doit savoir faire à la fin.
-2. **Vocabulaire progressif** — des listes de mots classées par thème et par difficulté.
-3. **Règles expliquées en détail** — grammaire, conjugaison, orthographe.
-4. **Textes à lire** — adaptés au niveau, avec explications.
-5. **Exercices et corrigés** — pour s'entraîner.
+> 👉 **Les documents sont en HTML (lecture à l'écran) et en PDF (impression).**
+> Ouvrez [`index.html`](./index.html) dans un navigateur pour naviguer, ou
+> ouvrez directement les PDF du dossier [`pdf/`](./pdf/).
 
 ---
 
-## 🗺️ Plan du parcours
+## 🗺️ Les documents
 
-| Niveau | Fichier | Âge / Classe | Contenu principal |
-|--------|---------|--------------|-------------------|
-| **1** | [`niveau-1-primaire-cp-ce1.md`](./niveau-1-primaire-cp-ce1.md) | 6–8 ans (CP–CE1) | Sons, syllabes, premiers mots, phrases simples |
-| **2** | [`niveau-2-primaire-ce2-cm2.md`](./niveau-2-primaire-ce2-cm2.md) | 8–11 ans (CE2–CM2) | Vocabulaire, présent, passé composé, textes courts |
-| **3** | [`niveau-3-college.md`](./niveau-3-college.md) | 11–15 ans (6ᵉ–3ᵉ) | Conjugaison complète, types de textes, récit |
-| **4** | [`niveau-4-lycee.md`](./niveau-4-lycee.md) | 15–17 ans (2ⁿᵈᵉ–1ʳᵉ) | Figures de style, argumentation, analyse littéraire |
-| **5** | [`niveau-5-terminale-bac.md`](./niveau-5-terminale-bac.md) | 17–18 ans (Terminale) | Dissertation, commentaire, textes classiques |
-| — | [`guide-methode.md`](./guide-methode.md) | Tous | Comment étudier, planning, conseils |
+| Niveau | Page HTML | PDF | Classe | Contenu |
+|--------|-----------|-----|--------|---------|
+| **Accueil** | [`index.html`](./index.html) | [pdf](./pdf/index.pdf) | — | Sommaire et conseils |
+| **1** | [niveau-1](./niveau-1-primaire-cp-ce1.html) | [pdf](./pdf/niveau-1-primaire-cp-ce1.pdf) | CP–CE1 | Sons, syllabes, premiers mots, phrases |
+| **2** | [niveau-2](./niveau-2-primaire-ce2-cm2.html) | [pdf](./pdf/niveau-2-primaire-ce2-cm2.pdf) | CE2–CM2 | Nature des mots, présent, passé composé |
+| **3** | [niveau-3](./niveau-3-college.html) | [pdf](./pdf/niveau-3-college.pdf) | 6ᵉ–3ᵉ | Conjugaison complète, types de textes, récit |
+| **4** | [niveau-4](./niveau-4-lycee.html) | [pdf](./pdf/niveau-4-lycee.pdf) | 2ⁿᵈᵉ–1ʳᵉ | Figures de style, registres, argumentation |
+| **5** | [niveau-5](./niveau-5-terminale-bac.html) | [pdf](./pdf/niveau-5-terminale-bac.pdf) | Terminale | Commentaire, dissertation, textes classiques |
+| **Guide** | [guide-methode](./guide-methode.html) | [pdf](./pdf/guide-methode.pdf) | Tous | Méthode, planning, erreurs fréquentes |
+| **Annexe** | [fiches-conjugaison](./fiches-conjugaison.html) | [pdf](./pdf/fiches-conjugaison.pdf) | Tous | Tableaux de conjugaison |
+
+Chaque niveau suit la même logique : **objectifs → vocabulaire progressif →
+règles détaillées → textes à lire → exercices avec corrigés**.
 
 ---
 
-## 🎯 Comment utiliser ces documents
+## 🖨️ Régénérer les PDF
 
-- **Suivez l'ordre des niveaux.** Ne passez au niveau suivant que lorsque vous
-  maîtrisez le précédent (faites les exercices !).
-- **Lisez à voix haute.** La lecture orale renforce la prononciation.
-- **Tenez un carnet de vocabulaire.** Notez chaque mot nouveau + un exemple.
-- **Révisez régulièrement.** 20 minutes par jour valent mieux que 3 heures une
-  fois par semaine.
+Les PDF sont produits à partir des fichiers HTML avec Playwright :
 
-> 💡 **Conseil du professeur** : apprendre une langue, c'est comme construire un
-> mur — une brique après l'autre. Chaque niveau est une brique posée sur la
-> précédente. Ne brûlez pas les étapes.
+```bash
+node build-pdf.js
+```
+
+*(Playwright et Chromium doivent être disponibles. Les PDF sont écrits dans `pdf/`.)*
+
+---
+
+## 🎯 Conseils d'utilisation
+
+- Suivez l'ordre des niveaux ; ne passez au suivant qu'une fois le précédent maîtrisé.
+- Lisez à voix haute et tenez un carnet de vocabulaire.
+- Faites les exercices : les corrigés sont repliables dans le HTML, et dépliés dans le PDF.
+- Révisez 20 à 30 minutes par jour plutôt que de longues séances rares.
 
 Bon apprentissage ! 🇫🇷
